@@ -1,16 +1,16 @@
 ---
-import { siteUrl } from '../config/site';
+import { pagePath } from '../config/site';
 
 const navItems = [
-  { href: siteUrl('/'), label: 'Ana Sayfa' },
-  { href: siteUrl('/hakkimda/'), label: 'Ben Kimim' },
-  { href: siteUrl('/birlikte/'), label: 'Birlikte Neler Yapabiliriz' },
+  { href: pagePath('/'), label: 'Ana Sayfa' },
+  { href: pagePath('/hakkimda/'), label: 'Ben Kimim' },
+  { href: pagePath('/birlikte/'), label: 'Birlikte Neler Yapabiliriz' },
 ];
 ---
 
 <header class="sticky top-0 z-40 border-b border-brown/10 bg-cream/95 backdrop-blur">
   <nav class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8" aria-label="Ana navigasyon">
-    <a href={siteUrl('/')} class="font-serif text-2xl font-bold text-brown">Seda Nerkis</a>
+    <a href={pagePath('/')} class="font-serif text-2xl font-bold text-brown">Seda Nerkis</a>
 
     <input id="menu-toggle" type="checkbox" class="peer sr-only" aria-label="Menüyü aç veya kapat" />
     <label
