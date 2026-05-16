@@ -1,0 +1,7 @@
+services:
+  website:
+    build: .
+    container_name: seda-nerkis-site
+    ports:
+      - "8080:80"
+    restart: unless-stopped

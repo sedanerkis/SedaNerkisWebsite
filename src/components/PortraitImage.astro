@@ -1,0 +1,23 @@
+---
+interface Props {
+  src: string;
+  alt?: string;
+  class?: string;
+  variant?: 'portrait' | 'square';
+}
+
+const { src, alt = 'Seda Nerkis', class: className = '', variant = 'portrait' } = Astro.props;
+const aspectClass = variant === 'square' ? 'aspect-square' : 'aspect-[3/4]';
+---
+
+<img
+  src={src}
+  alt={alt}
+  class:list={[
+    aspectClass,
+    'w-full object-cover object-center',
+    className,
+  ]}
+  loading="eager"
+  decoding="async"
+/>

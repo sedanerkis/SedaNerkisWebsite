@@ -1,0 +1,80 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ContactCTA from '../components/ContactCTA.astro';
+import PortraitImage from '../components/PortraitImage.astro';
+import { pageImages } from '../config/images';
+
+const sections = [
+  {
+    title: 'İçinizdeki Evreni Keşfetmek İster misiniz?',
+    paragraphs: [
+      'Niels Bohr, atomu bir güneş sistemine benzetmişti; tıpkı o atom gibi, her insan da kendi içinde devasa bir evren ve sistemdir. Bizi biz yapan şey, dışarıdan görünen fiziksel yapıdan çok daha fazla ve çok daha komplikedir.',
+      'Kuantum Alan Teorisi\'ne göre her şey etkileşim halindedir. Biz de zihnimiz, ruhumuz, genetik mirasımız, bilinçaltımız ve karmik aktarımlarımızla koca bir bütünüz. Bugün yaşadığınız –veya yaşayamadığınız– her şey, bu dinamiklerin ortak bir sonucudur. Örneğin, dışarıdan sadece bir "para kazanamama" sorunu gibi görünen durumun altında çalışan onlarca farklı dinamik olabilir. Amacımız, o buzdağının altındaki nedenleri anlayarak görünürdeki sorunu dönüştürmek.',
+    ],
+  },
+  {
+    title: 'Değişmek Mümkün mü?',
+    paragraphs: [
+      'Bildiğimiz en küçük parçacık olan kuarkların katı maddeler olmadığı, enerji kümeleri olduğu ortaya çoktan çıktı. Bu bilgiyi binlerce yıllık kadim öğretilerin aktardığı evreni ve insanı oluşturan en temel şeyin enerji olduğu inancının minik bir destekleyicisi gibi almayı seçebiliriz. Bunca yıldır hem kendi hayatımda hem de danışanlarımın deneyimlerinde defalarca şahitlik ettiğim şu gerçeğe ikna olarak bu yolculuğa başlamanızı önemsiyorum: hiçbir şey katı, değişmez ve keskin sınırlardan ibaret değildir. Beynimizin, biyolojimizin ve doğanın düzeninde esneklik, değişim ve dönüşüm hep vardır. Bunu kabul etmeden, buna inanıp güvenmeden başlanan değişim yolculukları ya yarım ya da sonuçsuz kalacaktır.',
+    ],
+  },
+  {
+    title: 'Her Şeyi Değiştirmek Zorunda mıyım?',
+    paragraphs: [
+      'Nasıl ki ışık hızı ya da yerçekimi gibi evrensel sabitlerin kabul gördüğü bir dünyadaysak kendi bireysel evrenlerimizin de belli sabitleri olabilir. Bu yolculukta bazı alanlarda radikal değişimleri başlatırken bir kısım özelliklerinizi ve alanları değişime zorlamak yerine hayatınızı kolaylaştıracak şekilde kullanmayı ve düzenlemeyi öğreneceksiniz.',
+      'Bildiğim ve güvendiğim yöntemlerle gerçekleştireceğimiz enerji çalışmalarının yanısıra nörobilim temelli yöntemlerle zihinsel ve davranışsal boyutu da çalışmalarımıza dahil edeceğiz. Böylece kendinizi tanımanızı, gölgelerinizi keşfetmenizi ve zorlandığınız yerleri kolaylaştırabilmenizi sağlamak üzere birlikte bir yol yürüyeceğiz.',
+    ],
+  },
+  {
+    title: 'Ne Kadar Zamana İhtiyacım Var?',
+    paragraphs: [
+      'Köklü inançları, otomatikleşmiş davranışları, tekrarlayan hikayeleri dönüştürmek kararlılık, cesaret, emek ve biraz da zaman gerektirir. Tek bir seanla her şeyi kalıcı olarak çözmeyi beklemek yıllar boyu yaşanmış deneyimleri ve duyguları hafife almak olacaktır. Haftada bir ya da iki haftada bir görüşmeler planlayarak sürdürebileceğimiz bir rutine birlikte karar verebiliriz.',
+    ],
+  },
+  {
+    title: 'Gelirken Yanımda Ne Getirmeliyim?',
+    paragraphs: [
+      'Öncelikle akut bir sorun yaşıyorsanız daha iyi ya da sakin olmayı beklemenize gerek yok. Ayrıca insanların sorunlarının yanında sizinkinin önemsiz olduğu düşüncesiyle kendinizi desteksiz ve yalnız bırakmanıza da hiç gerek yok. Herhangi bir ön hazırlığa gerek olmadan sadece gelmek istemeniz yeterli. İkimize de uygun ortak zamanı belirledikten sonra buluşuyoruz ve sizin hayatınızda "sorun" olarak tanımladığınız alanı dinleyerek başlıyoruz.',
+    ],
+  },
+  {
+    title: 'Başka Bir Sorunuz mu Var?',
+    paragraphs: [
+      'Seanslara başlamadan önce kısa bir tanışma görüşmesi yapmak, yüz yüze veya sesli bir iletişim kurmak, aklınıza takılanları sormak isterseniz bana her zaman ulaşabilirsiniz.',
+    ],
+  },
+];
+---
+
+<BaseLayout
+  title="Birlikte Neler Yapabiliriz – Seda Nerkis"
+  description="Bilinçaltı danışmanlığında süreç nasıl işler? Sorularınızın cevapları ve tanışma görüşmesi için bilgiler."
+>
+  <section class="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
+    <blockquote class="border-l-4 border-terracotta pl-6 font-serif text-3xl font-semibold leading-snug text-brown">
+      "Hayat, biz başka planlar yaparken başımıza rastgele gelenler değil; anne rahmindeki sürecimizden itibaren olanları nasıl anlamlandırdığımız ve zihnimizin derinliklerinde nasıl kodladığımızdır."
+    </blockquote>
+    <p class="mt-10 text-lg leading-8 text-brown/80">
+      Bu yolculuk, hayat akmaya devam ederken kendinizle kuracağınız yeni ilişkiyi ve kendiniz olarak yürüyeceğiniz yeni bir yolu yaratır. Başlaması ve devam etmesi için tek ihtiyaç kendi rızanız. Başkalarının hatırı, ricası ya da zorlamasıyla değil; sadece kendiniz için atmak istediğiniz o tek bir adımla her şey başlar.
+    </p>
+  </section>
+
+  <section class="bg-white px-4 py-12 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-[360px]">
+      <PortraitImage src={pageImages.birlikte} class="shadow-sm" />
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-4xl space-y-12 px-4 py-16 sm:px-6 lg:px-8">
+    {sections.map((section) => (
+      <article>
+        <h2 class="font-serif text-3xl font-bold text-brown">{section.title}</h2>
+        <div class="mt-5 space-y-5 text-lg leading-8 text-brown/80">
+          {section.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+        </div>
+      </article>
+    ))}
+  </section>
+
+  <ContactCTA />
+</BaseLayout>

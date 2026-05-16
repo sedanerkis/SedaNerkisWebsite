@@ -1,0 +1,34 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroSection from '../components/HeroSection.astro';
+import ContactCTA from '../components/ContactCTA.astro';
+import { siteUrl } from '../config/site';
+---
+
+<BaseLayout
+  title="Seda Nerkis – Bilinçaltı Danışmanı"
+  description="Seda Nerkis ile bilinçaltı danışmanlığı, aile danışmanlığı ve kişisel gelişim yolculuğunuza başlayın."
+>
+  <HeroSection />
+
+  <section class="bg-white px-4 py-14 sm:px-6 lg:px-8">
+    <div class="mx-auto grid max-w-6xl gap-8 md:grid-cols-2">
+      <article class="border-l-4 border-sage bg-cream p-7">
+        <h2 class="font-serif text-3xl font-bold">Ben Kimim</h2>
+        <p class="mt-4 leading-7 text-brown/75">
+          Görsel iletişim tasarımından bilinçaltı süreçlerine, sosyolojiden nörobilime uzanan bir yolculukla danışmanlık ve eğitim çalışmalarımı sürdürüyorum.
+        </p>
+        <a href={siteUrl('/hakkimda/')} class="mt-5 inline-flex font-semibold text-terracotta transition hover:text-brown">Devamını oku</a>
+      </article>
+      <article class="border-l-4 border-terracotta bg-cream p-7">
+        <h2 class="font-serif text-3xl font-bold">Birlikte Neler Yapabiliriz?</h2>
+        <p class="mt-4 leading-7 text-brown/75">
+          Bilinçaltı danışmanlığı, aile danışmanlığı ve kişisel gelişim çalışmalarında kendinizi tanımanıza ve zorlandığınız alanları dönüştürmenize eşlik ediyorum.
+        </p>
+        <a href={siteUrl('/birlikte/')} class="mt-5 inline-flex font-semibold text-terracotta transition hover:text-brown">Süreci keşfet</a>
+      </article>
+    </div>
+  </section>
+
+  <ContactCTA />
+</BaseLayout>

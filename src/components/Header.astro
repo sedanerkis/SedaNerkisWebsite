@@ -1,0 +1,35 @@
+---
+import { siteUrl } from '../config/site';
+
+const navItems = [
+  { href: siteUrl('/'), label: 'Ana Sayfa' },
+  { href: siteUrl('/hakkimda/'), label: 'Ben Kimim' },
+  { href: siteUrl('/birlikte/'), label: 'Birlikte Neler Yapabiliriz' },
+];
+---
+
+<header class="sticky top-0 z-40 border-b border-brown/10 bg-cream/95 backdrop-blur">
+  <nav class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8" aria-label="Ana navigasyon">
+    <a href={siteUrl('/')} class="font-serif text-2xl font-bold text-brown">Seda Nerkis</a>
+
+    <input id="menu-toggle" type="checkbox" class="peer sr-only" aria-label="Menüyü aç veya kapat" />
+    <label
+      for="menu-toggle"
+      class="flex h-10 w-10 cursor-pointer items-center justify-center rounded border border-brown/20 text-brown md:hidden"
+      aria-hidden="true"
+    >
+      <span class="sr-only">Menü</span>
+      <span class="block h-0.5 w-5 bg-brown before:block before:h-0.5 before:w-5 before:-translate-y-2 before:bg-brown before:content-[''] after:block after:h-0.5 after:w-5 after:translate-y-1.5 after:bg-brown after:content-['']"></span>
+    </label>
+
+    <div class="absolute left-0 right-0 top-full hidden border-b border-brown/10 bg-cream px-4 py-4 shadow-sm peer-checked:block md:static md:block md:border-0 md:bg-transparent md:p-0 md:shadow-none">
+      <ul class="flex flex-col gap-3 text-sm font-medium text-brown/80 md:flex-row md:items-center md:gap-8">
+        {navItems.map((item) => (
+          <li>
+            <a class="transition hover:text-terracotta" href={item.href}>{item.label}</a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </nav>
+</header>

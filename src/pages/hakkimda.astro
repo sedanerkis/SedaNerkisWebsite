@@ -1,0 +1,75 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PortraitImage from '../components/PortraitImage.astro';
+import { pageImages } from '../config/images';
+
+const certificates = [
+  'Kuantum Koçluk',
+  'Maya Şamanizmi',
+  'Budizme Giriş',
+  'Meditasyon',
+  'Reiki',
+  'Evrensel Şifa',
+  'Nefes Terapisi',
+  'Access Bars',
+  'Masal Anlatıcılığı',
+  'Eğiticinin Eğitimi',
+];
+
+const specialties = [
+  'Bilinçaltı Danışmanlık',
+  'Aile Danışmanlığı',
+  'Nefes Uygulayıcılığı',
+  'Kişisel Gelişim Eğitmeni',
+];
+---
+
+<BaseLayout
+  title="Ben Kimim – Seda Nerkis"
+  description="Seda Nerkis'in hikayesi: Görsel iletişim tasarımından bilinçaltı danışmanlığına, nörobilimden şifaya uzanan yolculuk."
+>
+  <section class="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
+    <div class="grid items-center gap-8 md:grid-cols-[300px_1fr]">
+      <div class="mx-auto w-full max-w-[300px]">
+        <PortraitImage src={pageImages.hakkimda} variant="square" class="shadow-sm" />
+      </div>
+      <div>
+        <h1 class="font-serif text-5xl font-bold">Seda Nerkis</h1>
+        <p class="mt-5 text-lg font-medium text-brown/75">
+          Bilinçaltı Danışmanı · Eğitmen · Aile Danışmanı · Sosyolog
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white px-4 py-14 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-3xl space-y-6 text-lg leading-8 text-brown/80">
+      <p>1985 yılında İstanbul'da başlayan hikayem, İtalyan Lisesi'nin ardından tam burslu olarak kazandığım Yeditepe Üniversitesi Görsel İletişim Tasarımı Bölümü'nü birincilikle bitirdim. Üniversitedeki son yılımdan itibaren kurumsal hayatı deneyimlediğim süreç bana asıl merakımın başka olduğunu fark ettirdi. "Kendim olabileceğim alanı bulma" motivasyonu ile çıktığım yolda, 2013 yılından beri bilinçaltı süreçleri, ilişki dinamikleri ve insan ruhunun şifası üzerine çalışıyorum.</p>
+      <p>Yepyeni bir yol ve alana geçmiş olmanın merakı ve öğrenme isteğiyle bir taraftan danışmanlık yaparken bir yandan da bilinçaltının gizemli işleyişini sadece sezgilerle değil, akademik bir zeminle de temellendirmek adına İstanbul Üniversitesi'nde önce Sosyoloji ve devamında Çocuk Gelişimi bölümlerini tamamladım. Bunlarla eşzamanlı olarak katıldığım farklı eğitim ve sınavların ardından MEB onaylı Aile Danışmanıyım.</p>
+      <p>Bilinçdışı süreçler ve beyinle ilgili daha da artan merakım ve öğrenme arzum beni Üsküdar Üniversitesi Nörobilim Yüksek Lisans programına götürdü. Bugün çalışmalarımı; nörobilimin rasyonel verileri ile bilinçaltının işleyişi ve dilini birleştirerek kurguluyorum.</p>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
+    <h2 class="font-serif text-4xl font-bold">Eğitim & Sertifikalar</h2>
+    <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+      {certificates.map((item) => (
+        <article class="border border-brown/10 bg-white p-5 shadow-sm">
+          <p class="font-medium">{item}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="bg-sage/20 px-4 py-14 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-6xl">
+      <h2 class="font-serif text-4xl font-bold">Uzmanlık Alanları</h2>
+      <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        {specialties.map((item) => (
+          <div class="border border-sage/40 bg-cream p-5 font-semibold text-brown">{item}</div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
